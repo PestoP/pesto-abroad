@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div>
     <h1>{{countryName}}</h1>
     <h1>{{approximateDate}}</h1>
     <svg class='asia-map' xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
@@ -94,7 +94,7 @@ import {countries} from '../constants'
 export default {
   data () {
     return {
-      countryName: 'this is an about page',
+      countryName: '',
       approximateDate: ''
     }
   },
