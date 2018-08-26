@@ -1,13 +1,25 @@
 <template>
-  <v-container fluid>
+  <v-container fluid grid-list-md text-xs-center>
     <ToolbarMenu />
-    <AsianMap />
-  </v-container>
+    <v-layout row wrap class='page-container'>
+        <v-flex xs2 style="z-index:1;">
+          <CountriesList />
+        </v-flex>
+        <v-flex xs5>
+          <AsianMap />
+        </v-flex>
+        <v-flex xs5  style="z-index:1;">
+          <CountryCard />
+        </v-flex>
+    </v-layout>
+</v-container>
 </template>
 
 <script>
-import AsianMap from './AsianMap.vue'
 import ToolbarMenu from './ToolbarMenu.vue'
+import AsianMap from './AsianMap.vue'
+import CountriesList from './CountriesList.vue'
+import CountryCard from './CountryCard.vue'
 
 export default {
   name: 'Home',
@@ -16,8 +28,10 @@ export default {
     }
   },
   components: {
+    ToolbarMenu,
     AsianMap,
-    ToolbarMenu
+    CountriesList,
+    CountryCard
   }
 }
 </script>
@@ -26,15 +40,23 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
+}
+
+.page-container {
+  padding-top: 75px;
+  padding-bottom: 0;
 }
 </style>
