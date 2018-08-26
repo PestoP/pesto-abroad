@@ -1,11 +1,13 @@
 <template>
   <v-container fluid>
+    <ToolbarMenu />
     <AsianMap />
   </v-container>
 </template>
 
 <script>
 import AsianMap from './AsianMap.vue'
+import ToolbarMenu from './ToolbarMenu.vue'
 
 export default {
   name: 'Home',
@@ -14,7 +16,8 @@ export default {
     }
   },
   components: {
-    AsianMap
+    AsianMap,
+    ToolbarMenu
   }
 }
 </script>
