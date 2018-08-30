@@ -1,5 +1,13 @@
 <template>
-  <h1>
-    Liste des pays
-  </h1>
+  <div>
+    <h1>
+      Liste des pays
+    </h1>
+  </div>
 </template>
+
+<script>
+export default {
+  props: ['countryName']
+}
+</script>
