@@ -3,6 +3,10 @@ export default {
     name: 'Cambodge',
     approximateDate: 'Mars 2018'
   },
+  myanmar: {
+    name: 'Birmanie',
+    approximateDate: 'Décembre 2017'
+  },
   indonesia: {
     name: 'Indonésie',
     approximateDate: 'Octobre 2017'
@@ -14,10 +18,6 @@ export default {
   malaysia: {
     name: 'Malaisie',
     approximateDate: 'Juin-Juillet-Août 2018'
-  },
-  myanmar: {
-    name: 'Birmanie',
-    approximateDate: 'Décembre 2017'
   },
   philippines: {
     name: 'Philippines',
