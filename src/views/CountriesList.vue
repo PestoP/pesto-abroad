@@ -5,8 +5,10 @@
     </h1>
     <div>
       <ul class='countries-list'>
-        <li v-for="country in countries" :key="country.name" class='country' :class="{ active: country.name === countrySelected }"> {{country.name}}</li>
-        <v-divider />
+        <div v-for="country in countries" :key="country.name" class='country'>
+          <v-divider class='divider'> </v-divider>
+          <li :class="{ active: country.name === countrySelected }"> {{country.name}}</li>
+        </div>
       </ul>
     </div>
   </div>
@@ -31,7 +33,7 @@ export default {
   height: 45%;
 
   h1 {
-    padding-bottom: 6vh;
+    padding-bottom: 5vh;
   }
 
   .countries-list {
@@ -43,10 +45,13 @@ export default {
     list-style-type: none;
     font-size: 1.5em;
     .country {
-      padding-bottom: 5vh;
+      padding-bottom: 2.5vh;
       cursor: pointer;
       &:hover {
         @extend .active
+      }
+      .divider {
+        padding-bottom: inherit;
       }
     }
   }
