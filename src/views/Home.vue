@@ -3,13 +3,13 @@
     <ToolbarMenu />
     <v-layout row wrap class='page-container'>
         <v-flex xs2 style="z-index:1;">
-          <CountriesList />
+          <CountriesList :countryName='countryName' />
         </v-flex>
         <v-flex xs5>
-          <AsianMap />
+          <AsianMap v-on:country-changed='countryChanged' />
         </v-flex>
         <v-flex xs5  style="z-index:1;">
-          <CountryCard />
+          <CountryCard :countryName='countryName' />
         </v-flex>
     </v-layout>
 </v-container>
@@ -25,6 +25,7 @@ export default {
   name: 'Home',
   data () {
     return {
+      countryName: ''
     }
   },
   components: {
@@ -32,6 +33,11 @@ export default {
     AsianMap,
     CountriesList,
     CountryCard
+  },
+  methods: {
+    countryChanged (countryName) {
+      this.countryName = countryName
+    }
   }
 }
 </script>
