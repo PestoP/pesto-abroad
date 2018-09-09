@@ -11,7 +11,8 @@ import {
   VToolbar,
   transitions,
   VDivider,
-  VBreadcrumbs
+  VBreadcrumbs,
+  VCard
 } from 'vuetify'
 import 'vuetify/src/stylus/app.styl'
 
@@ -27,6 +28,7 @@ Vue.use(Vuetify, {
     VToolbar,
     transitions,
     VDivider,
-    VBreadcrumbs
+    VBreadcrumbs,
+    VCard
   }
 })

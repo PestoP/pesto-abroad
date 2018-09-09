@@ -9,7 +9,7 @@
           <AsianMap v-on:country-changed='countryChanged' />
         </v-flex>
         <v-flex xs5  style="z-index:1;">
-          <CountryCard :countryName='countryName' />
+          <CountryCard :countrySelected='countryName' />
         </v-flex>
     </v-layout>
 </v-container>

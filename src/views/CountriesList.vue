@@ -7,7 +7,7 @@
       <ul class='countries-list'>
         <div v-for="country in countries" :key="country.name" class='country'>
           <v-divider class='divider'> </v-divider>
-          <li :class="{ active: country.name === countrySelected }"> {{country.name}}</li>
+          <li :class="{ active: country.name === countries[countrySelected].name }"> {{country.name}}</li>
         </div>
       </ul>
     </div>
