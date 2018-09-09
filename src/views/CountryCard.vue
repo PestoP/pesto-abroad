@@ -31,8 +31,8 @@ export default {
   props: ['countrySelected'],
   methods: {
     getUrl () {
-      const countryName = countries[this.countrySelected].key
-      return require('@/assets/' + countryName + '.jpeg')
+      const countryName = countries[this.countrySelected] ? countries[this.countrySelected].key : undefined
+      return countryName ? require('@/assets/' + countryName + '.jpeg') : ''
     }
   }
 }

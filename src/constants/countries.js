@@ -20,7 +20,7 @@ export default {
     approximateDate: 'Janvier 2018'
   },
   malaysia: {
-    key: 'malaisia',
+    key: 'malaysia',
     name: 'Malaisie',
     approximateDate: 'Juin-Juillet-Août 2018'
   },
