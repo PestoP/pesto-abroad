@@ -3,7 +3,7 @@
     <ToolbarMenu />
     <v-layout row wrap class='page-container'>
         <v-flex xs2 style="z-index:1;">
-          <CountriesList :countrySelected='countryName' />
+          <CountriesList v-on:country-changed='countryChanged' :countrySelected='countryName' />
         </v-flex>
         <v-flex xs5>
           <AsianMap v-on:country-changed='countryChanged' />
