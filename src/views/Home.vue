@@ -9,7 +9,7 @@
           <AsianMap v-on:country-changed='countryChanged' />
         </v-flex>
         <v-flex xs5  style="z-index:1;">
-          <CountryCard :countryName='countryName' />
+          <CountryCard :countrySelected='countryName' />
         </v-flex>
     </v-layout>
 </v-container>
@@ -20,12 +20,13 @@ import ToolbarMenu from './ToolbarMenu.vue'
 import AsianMap from './AsianMap.vue'
 import CountriesList from './CountriesList.vue'
 import CountryCard from './CountryCard.vue'
+import {countries} from '../constants'
 
 export default {
   name: 'Home',
   data () {
     return {
-      countryName: ''
+      countryName: countries.find(country => country.current).key
     }
   },
   components: {
