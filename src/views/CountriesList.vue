@@ -1,16 +1,11 @@
 <template>
   <div class="container">
-    <h1>
-      Liste des pays
-    </h1>
-    <div>
-      <ul class='countries-list'>
-        <div v-for="country in countries" :key="country.name" class='country' @mouseover="$emit('country-changed', country.key)">
-          <v-divider class='divider'> </v-divider>
-          <li :class="{ active: country.name === countries.find(country => country.key === countrySelected).name }"> {{country.name}}</li>
-        </div>
-      </ul>
-    </div>
+    <ul class='countries-list'>
+      <div v-for="(country, index) in countries" :key="country.name" class='country' @mouseover="$emit('country-changed', country.key)">
+        <v-divider v-if='index !== 0' class='divider'> </v-divider>
+        <li :class="{ active: country.name === countries.find(country => country.key === countrySelected).name }"> {{country.name}}</li>
+      </div>
+    </ul>
   </div>
 </template>
 
@@ -41,11 +36,12 @@ export default {
       color: green;
       font-weight: bold;
     }
+    padding-top: 40px;
     padding-left: 0px;
     list-style-type: none;
     font-size: 1.5em;
     .country {
-      padding-bottom: 2.5vh;
+      padding-bottom: 3vh;
       cursor: pointer;
       &:hover {
         @extend .active
