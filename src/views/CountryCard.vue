@@ -8,7 +8,7 @@
             aspect-ratio="2.75"
           />
           <v-card-title primary-title class='card-title-text'>
-              <h3 class="headline mb-0 card-title">{{countryName}}</h3>
+              <h3 class="headline mb-0 card-title">{{countries.find(country => country.key === this.countrySelected).name}}</h3>
               <div class='card-text'>Located two hours south of Sydney in the Southern Highlands of New South Wales, ...</div>
           </v-card-title>
           <v-card-actions class='explore'>
@@ -26,7 +26,7 @@ export default {
   props: ['countrySelected'],
   data () {
     return {
-      countryName: countries.find(country => country.key === this.countrySelected).name
+      countries: countries
     }
   },
   methods: {
