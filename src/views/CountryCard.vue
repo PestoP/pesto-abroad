@@ -8,7 +8,7 @@
             aspect-ratio="2.75"
           />
           <v-card-title primary-title class='card-title-text'>
-              <h3 class="headline mb-0 card-title">{{countrySelected}}</h3>
+              <h3 class="headline mb-0 card-title">{{countryName}}</h3>
               <div class='card-text'>Located two hours south of Sydney in the Southern Highlands of New South Wales, ...</div>
           </v-card-title>
           <v-card-actions class='explore'>
@@ -24,10 +24,15 @@ import {countries} from '../constants'
 
 export default {
   props: ['countrySelected'],
+  data () {
+    return {
+      countryName: countries.find(country => country.key === this.countrySelected).name
+    }
+  },
   methods: {
     getUrl () {
-      const countryName = countries[this.countrySelected] ? countries[this.countrySelected].key : undefined
-      return countryName ? require('@/assets/' + countryName + '.jpeg') : ''
+      const countryKey = countries.find(country => country.key === this.countrySelected).key
+      return require('@/assets/' + countryKey + '.jpeg')
     }
   }
 }
@@ -53,8 +58,9 @@ export default {
   display: block;
 
   .card-title {
-    padding-bottom: 10px; 
+    padding-bottom: 10px;
   }
+
   .card-text {
     text-align: initial;
   }
