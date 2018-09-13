@@ -1,15 +1,19 @@
 <template>
   <v-app style='overflow: hidden;'>
-    <router-view/>
+    <v-container fluid grid-list-md text-xs-center>
+      <ToolbarMenu />
+      <router-view/>
+    </v-container>
   </v-app>
 </template>
 
 <script>
+import ToolbarMenu from './views/ToolbarMenu.vue'
+
 export default {
   name: 'App',
-  data () {
-    return {
-    }
+  components: {
+    ToolbarMenu
   }
 }
 </script>
