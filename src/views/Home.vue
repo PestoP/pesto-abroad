@@ -1,5 +1,5 @@
 <template>
-    <v-layout row wrap class='page-container'>
+    <v-layout row wrap>
       <v-flex xs2 style="z-index:1;">
           <CountriesList v-on:country-changed='countryChanged' :countrySelected='countryName' />
         </v-flex>
@@ -57,8 +57,4 @@ a {
   color: #42b983;
 }
 
-.page-container {
-  padding-top: 75px;
-  padding-bottom: 0;
-}
 </style>

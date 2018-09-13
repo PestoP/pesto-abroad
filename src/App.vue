@@ -2,7 +2,7 @@
   <v-app style='overflow: hidden;'>
     <v-container fluid grid-list-md text-xs-center>
       <ToolbarMenu />
-      <router-view/>
+      <router-view class='page-container'/>
     </v-container>
   </v-app>
 </template>
@@ -21,5 +21,10 @@ export default {
 <style>
   html {
     overflow: hidden;
+  }
+
+  .page-container {
+    padding-top: 75px;
+    padding-bottom: 0;
   }
 </style>
