@@ -1,0 +1,107 @@
+<template>
+  <div class='parent-grid'>
+    <template v-for="(article, index) in articles">
+        <v-card :key='index'>
+          <img
+            class='article-image'
+            :src='getUrl(article.imageUrl)'
+            aspect-ratio="2.75"
+          />
+          <v-card-title primary-title class='card-title-text'>
+              <h3 class="headline mb-0 card-title">{{article.name}}</h3>
+              <div class='card-text'> {{article.description}} </div>
+          </v-card-title>
+          <v-card-actions class='explore'>
+            <router-link v-bind:to="'country'">
+              <v-btn flat color="green">Voir l'article</v-btn>
+            </router-link>
+          </v-card-actions>
+        </v-card>
+      <div :key="index + 'emptyDiv'"></div>
+    </template>
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      articles: [
+        {
+          name: 'article 1',
+          imageUrl: 'malaysia',
+          description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
+        },
+        {
+          name: 'article 2',
+          imageUrl: 'malaysia',
+          description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
+        },
+        {
+          name: 'article 3',
+          imageUrl: 'malaysia',
+          description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
+        },
+        {
+          name: 'article 4',
+          imageUrl: 'malaysia',
+          description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
+        },
+        {
+          name: 'article 5',
+          imageUrl: 'malaysia',
+          description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
+        },
+        {
+          name: 'article 6',
+          imageUrl: 'malaysia',
+          description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
+        }
+      ]
+    }
+  },
+  methods: {
+    getUrl (imageUrl) {
+      return require('@/assets/' + imageUrl + '.jpeg')
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+  html {
+    overflow-y: auto;
+  }
+
+  .article-image {
+    height: 200px;
+    width: 100%;
+  }
+
+  .explore {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .parent-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 150px;
+    grid-column-gap: 2em;
+
+    :nth-child(odd) {
+      grid-column: 1 / span 1;
+      grid-row: span 3;
+    }
+
+    :nth-child(4n-1) {
+      grid-column: 2 / span 1;
+      grid-row: span 3;
+    }
+
+    :nth-child(2) {
+      grid-row: span 2;
+    }
+  }
+</style>

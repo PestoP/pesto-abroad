@@ -1,8 +1,6 @@
 <template>
-  <v-container fluid grid-list-md text-xs-center>
-    <ToolbarMenu />
-    <v-layout row wrap class='page-container'>
-        <v-flex xs2 style="z-index:1;">
+    <v-layout row wrap>
+      <v-flex xs2 style="z-index:1;">
           <CountriesList v-on:country-changed='countryChanged' :countrySelected='countryName' />
         </v-flex>
         <v-flex xs5>
@@ -12,11 +10,9 @@
           <CountryCard :countrySelected='countryName' />
         </v-flex>
     </v-layout>
-</v-container>
 </template>
 
 <script>
-import ToolbarMenu from './ToolbarMenu.vue'
 import AsianMap from './AsianMap.vue'
 import CountriesList from './CountriesList.vue'
 import CountryCard from './CountryCard.vue'
@@ -30,7 +26,6 @@ export default {
     }
   },
   components: {
-    ToolbarMenu,
     AsianMap,
     CountriesList,
     CountryCard
@@ -62,8 +57,4 @@ a {
   color: #42b983;
 }
 
-.page-container {
-  padding-top: 75px;
-  padding-bottom: 0;
-}
 </style>

@@ -12,7 +12,9 @@
               <div class='card-text'>Located two hours south of Sydney in the Southern Highlands of New South Wales, ...</div>
           </v-card-title>
           <v-card-actions class='explore'>
-            <v-btn flat color="orange">Explore</v-btn>
+            <router-link v-bind:to="'country'">
+              <v-btn flat color="orange">Explore</v-btn>
+            </router-link>
           </v-card-actions>
         </v-card>
     </div>

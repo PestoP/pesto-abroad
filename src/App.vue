@@ -1,15 +1,19 @@
 <template>
   <v-app style='overflow: hidden;'>
-    <router-view/>
+    <v-container fluid grid-list-md text-xs-center>
+      <ToolbarMenu />
+      <router-view class='page-container'/>
+    </v-container>
   </v-app>
 </template>
 
 <script>
+import ToolbarMenu from './views/ToolbarMenu.vue'
+
 export default {
   name: 'App',
-  data () {
-    return {
-    }
+  components: {
+    ToolbarMenu
   }
 }
 </script>
@@ -17,5 +21,10 @@ export default {
 <style>
   html {
     overflow: hidden;
+  }
+
+  .page-container {
+    padding-top: 75px;
+    padding-bottom: 0;
   }
 </style>
