@@ -1,40 +1,11 @@
 <template>
     <v-layout row wrap>
-      <v-flex xs2 style="z-index:1;">
-          <CountriesList v-on:country-changed='countryChanged' :countrySelected='countryName' />
-        </v-flex>
-        <v-flex xs5>
-          <AsianMap v-on:country-changed='countryChanged' />
-        </v-flex>
-        <v-flex xs5  style="z-index:1;">
-          <CountryCard :countrySelected='countryName' />
-        </v-flex>
     </v-layout>
 </template>
 
 <script>
-import AsianMap from './AsianMap.vue'
-import CountriesList from './CountriesList.vue'
-import CountryCard from './CountryCard.vue'
-import {countries} from '../constants'
-
 export default {
-  name: 'Home',
-  data () {
-    return {
-      countryName: countries.find(country => country.current).key
-    }
-  },
-  components: {
-    AsianMap,
-    CountriesList,
-    CountryCard
-  },
-  methods: {
-    countryChanged (countryName) {
-      this.countryName = countryName
-    }
-  }
+  name: 'Home'
 }
 </script>
 
