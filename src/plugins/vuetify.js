@@ -12,7 +12,8 @@ import {
   transitions,
   VDivider,
   VBreadcrumbs,
-  VCard
+  VCard,
+  VAvatar
 } from 'vuetify'
 import 'vuetify/src/stylus/app.styl'
 
@@ -29,6 +30,7 @@ Vue.use(Vuetify, {
     transitions,
     VDivider,
     VBreadcrumbs,
-    VCard
+    VCard,
+    VAvatar
   }
 })
