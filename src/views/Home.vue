@@ -58,17 +58,17 @@ export default {
         {
           title: 'Articles annexes',
           content: "C'est à cet endroit que je publis à propos de sujets précis (sûrement à propos du voyage). Ça peut être des anecdotes comme des articles sur l'hébergement, l'auto-stop, etc.",
-          imgUrl: 'https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/drop.jpg'
+          imgUrl: require('@/assets/annexe_articles.jpg')
         },
         {
           title: 'Liste des pays',
           content: "Petite liste des pays que je vais parcourir, avec les articles liés à ceux-ci. Pour information, il faut que j'ai parcouru le pays pour qu'il y ait des articles dessus x)",
-          imgUrl: 'https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/docks.jpg'
+          imgUrl: require('@/assets/countries_map.jpg')
         },
         {
-          title: 'Mon dernier article',
-          content: "C'est un accès direct au tout dernier article écrit :) En ce moment c'est à propos de mon arrivée à Jakarta (première étape de mon périple)",
-          imgUrl: 'https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/plane.jpg'
+          title: 'Dernier article',
+          content: "C'est un accès direct au tout dernier article écrit :) En ce moment, c'est à propos de mon arrivée à Jakarta (première étape de mon périple)",
+          imgUrl: require('@/assets/jakarta.jpg')
         }
       ]
     }
