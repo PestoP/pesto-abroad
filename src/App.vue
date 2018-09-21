@@ -1,9 +1,7 @@
 <template>
   <v-app style='overflow: hidden;'>
-    <v-container grid-list-md text-xs-center>
-      <ToolbarMenu />
-      <router-view class='page-container'/>
-    </v-container>
+    <ToolbarMenu />
+    <router-view class='page-container'/>
   </v-app>
 </template>
 

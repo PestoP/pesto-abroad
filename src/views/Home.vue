@@ -1,6 +1,6 @@
 <template>
-    <v-layout row wrap align-center>
-      <v-flex xs12 md4>
+    <v-layout grid-list-md row wrap align-center>
+      <v-flex xs12 md3 offset-md1>
         <div class="text-xs-center">
           <v-avatar size="125px">
             <img
@@ -11,7 +11,7 @@
           <div class="headline"><span style="font-weight:bold">Pesto</span> Abroad</div>
           <div class="subheading text-xs-center grey--text pt-1 pb-3">Porter sur le monde un regard sans haine</div>
           <v-layout justify-space-between>
-            <router-link :to="'countries'">
+            <router-link :to="{path: '/'}">
               <a href="javascript:;" class="body-2">Accueil</a>
             </router-link>
             <a href="javascript:;" class="body-2">À propos</a>
@@ -37,7 +37,7 @@
                   </v-layout>
                 </v-container>
               </v-card-media>
-              <v-card-text style='text-align: initial;'>
+              <v-card-text>
                 {{ post.content }}
               </v-card-text>
               <v-card-actions>

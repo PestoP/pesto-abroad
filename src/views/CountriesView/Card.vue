@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <router-link height="740px" tag='div' :to="{ name: 'country', params: { countryName: countries.find(country => country.key === this.countrySelected).key }}">
+    <router-link tag='div' :to="{ name: 'country', params: { countryName: countries.find(country => country.key === this.countrySelected).key }}">
       <v-card height="740px" hover>
         <img
           :src="getUrl()"
@@ -54,15 +54,10 @@ export default {
 }
 
 .card-title-text {
-  text-align: center;
   display: block;
 
   .card-title {
     padding-bottom: 10px;
-  }
-
-  .card-text {
-    text-align: initial;
   }
 }
 

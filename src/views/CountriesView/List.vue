@@ -31,6 +31,7 @@ export default {
 
 .container {
   height: 45%;
+  text-align: center;
 
   h1 {
     padding-bottom: 5vh;

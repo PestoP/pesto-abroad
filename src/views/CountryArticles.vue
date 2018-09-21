@@ -89,10 +89,6 @@ export default {
     right: 0;
   }
 
-  .card-text {
-    text-align: initial;
-  }
-
   .parent-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -114,6 +110,7 @@ export default {
     }
 
     .no-article {
+      text-align: center;
       grid-column: 1 / span 2;
       grid-row: 3;
     }
