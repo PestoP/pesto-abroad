@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <ul class='countries-list'>
-      <div v-for="(country, index) in countries" :key="country.name" class='country' @mouseover="$emit('country-changed', country.key)">
+      <div v-for="(country, index) in countries" :key="country.name" class='country' @click='goTo(country.key)' @mouseover="$emit('country-changed', country.key)">
         <v-divider v-if='index !== 0' class='divider'> </v-divider>
         <li :class="{ active: country.name === countries.find(country => country.key === countrySelected).name }"> {{country.name}}</li>
       </div>
@@ -17,6 +17,11 @@ export default {
   data () {
     return {
       countries: countries
+    }
+  },
+  methods: {
+    goTo (country) {
+      this.$router.push({name: 'country', params: { countryName: country }})
     }
   }
 }

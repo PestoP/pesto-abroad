@@ -13,9 +13,7 @@
             <div class='card-text'> {{article.description}} </div>
         </v-card-title>
         <v-card-actions class='explore'>
-          <router-link v-bind:to="'country'">
             <v-btn flat color="green">Voir l'article</v-btn>
-          </router-link>
         </v-card-actions>
       </router-link>
       <div :key="index + 'emptyDiv'"></div>
