@@ -1,23 +1,21 @@
 <template>
   <div class="container">
-    <div>
-      <v-card height="740px">
-          <img
-            :src="getUrl()"
-            class='card-country-img'
-            aspect-ratio="2.75"
-          />
-          <v-card-title primary-title class='card-title-text'>
-              <h3 class="headline mb-0 card-title">{{countries.find(country => country.key === this.countrySelected).name}}</h3>
-              <div class='card-text'>Located two hours south of Sydney in the Southern Highlands of New South Wales, ...</div>
-          </v-card-title>
-          <v-card-actions class='explore'>
-            <router-link v-bind:to="'country'">
-              <v-btn flat color="orange">Explore</v-btn>
-            </router-link>
-          </v-card-actions>
-        </v-card>
-    </div>
+    <router-link height="740px" tag='div' :to="{ name: 'country', params: { countryName: countries.find(country => country.key === this.countrySelected).key }}">
+      <v-card height="740px" hover>
+        <img
+          :src="getUrl()"
+          class='card-country-img'
+          aspect-ratio="2.75"
+        />
+        <v-card-title primary-title class='card-title-text'>
+            <h3 class="headline mb-0 card-title">{{countries.find(country => country.key === this.countrySelected).name}}</h3>
+            <div class='card-text'>Located two hours south of Sydney in the Southern Highlands of New South Wales, ...</div>
+        </v-card-title>
+        <v-card-actions class='explore'>
+          <v-btn flat color="orange">Explore</v-btn>
+        </v-card-actions>
+      </v-card>
+    </router-link>
   </div>
 </template>
 

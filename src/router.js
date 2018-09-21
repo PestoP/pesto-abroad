@@ -14,7 +14,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/country',
+      path: '/country/:countryName',
       name: 'country',
       component: CountryArticles
     },
