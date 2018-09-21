@@ -1,6 +1,6 @@
 <template>
     <v-layout grid-list-md row wrap align-center>
-      <v-flex xs12 md3 offset-md1>
+      <v-flex xs10 offset-xs1 md3 offset-md1>
         <div class="text-xs-center">
           <v-avatar size="125px">
             <img
@@ -20,7 +20,7 @@
           </v-layout>
         </div>
       </v-flex>
-      <v-flex xs12 md5 offset-md2>
+      <v-flex xs10 offset-xs1 md5 offset-md2>
         <div v-for="post in posts" :key="post.title">
           <router-link tag='div' :to="post.linkTo">
             <v-card class="my-3" hover>
