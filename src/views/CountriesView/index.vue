@@ -3,10 +3,10 @@
       <v-flex xs10 offset-xs1 md2 style="z-index:1;">
           <CountriesList v-on:country-changed='countryChanged' :countrySelected='countryName' />
         </v-flex>
-        <v-flex md5 class="hidden-sm-and-down">
+        <v-flex md4 class="hidden-sm-and-down">
           <AsianMap v-on:country-changed='countryChanged' />
         </v-flex>
-        <v-flex xs10 offset-xs1 md5 style="z-index:1;">
+        <v-flex xs10 offset-xs1 offset-md0 md5 style="z-index:1;">
           <CountryCard justify-center :countrySelected='countryName' />
         </v-flex>
     </v-layout>
