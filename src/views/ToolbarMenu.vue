@@ -42,7 +42,7 @@ export default {
       // dynamic hack to change :countryName by the real value
       if (this.$route.params.countryName) {
         breadcrumb[breadcrumb.length - 1] = {
-          name: this.$route.params.countryName,
+          name: this.$route.params.countryName.charAt(0).toUpperCase() + this.$route.params.countryName.slice(1),
           linkTo: 'country',
           disabled: true
         }
