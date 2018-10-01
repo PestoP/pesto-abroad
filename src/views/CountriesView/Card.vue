@@ -5,6 +5,7 @@
         <img
           :src="getUrl()"
           class='card-country-img'
+          :alt="countries.find(country => country.key === this.countrySelected).name"
           aspect-ratio="2.75"
         />
         <v-card-title primary-title class='card-title-text'>

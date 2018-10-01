@@ -5,6 +5,7 @@
           <v-avatar size="125px">
             <img
               class="img-circle elevation-7 mb-1"
+              alt='pesto-avatar'
               src="@/assets/avatar.png"
             >
           </v-avatar>
@@ -28,6 +29,7 @@
                 class="white--text"
                 height="170px"
                 :src="post.imgUrl"
+                :alt="post.title"
               >
                 <v-container fill-height fluid>
                   <v-layout text-xs-left>

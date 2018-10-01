@@ -6,6 +6,7 @@
         <img
           class='article-image'
           :src='getUrl(article.imageUrl)'
+          :alt="article.name"
           aspect-ratio="2.75"
         />
         <v-card-title primary-title class='card-title-text'>
