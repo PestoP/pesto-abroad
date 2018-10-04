@@ -5,6 +5,7 @@
         <img
           :src="getUrl()"
           class='card-country-img'
+          :alt="countries.find(country => country.key === this.countrySelected).name"
           aspect-ratio="2.75"
         />
         <v-card-title primary-title class='card-title-text'>
@@ -12,7 +13,7 @@
             <div class='card-text'>Located two hours south of Sydney in the Southern Highlands of New South Wales, ...</div>
         </v-card-title>
         <v-card-actions class='explore'>
-          <v-btn flat color="orange">Explore</v-btn>
+          <v-btn flat color="brown">Explore</v-btn>
         </v-card-actions>
       </v-card>
     </router-link>
