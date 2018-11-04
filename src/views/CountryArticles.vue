@@ -93,6 +93,9 @@ export default {
   }
 
   .parent-grid {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 150px;
