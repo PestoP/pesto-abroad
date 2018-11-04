@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import CountryArticles from './views/CountryArticles.vue'
 import CountriesView from './views/CountriesView/index.vue'
+import Article from './views/Article.vue'
 
 Vue.use(Router)
 
@@ -67,6 +68,35 @@ export default new Router({
           {
             name: ':/countryName',
             linkTo: 'country',
+            disabled: true
+          }
+        ]
+      }
+    },
+    {
+      path: '/countries/:countryName/articles/:articleName',
+      name: 'article',
+      component: Article,
+      meta: {
+        breadcrumb: [
+          {
+            name: 'Accueil',
+            linkTo: 'home',
+            disabled: false
+          },
+          {
+            name: 'Liste des pays',
+            linkTo: 'countries',
+            disabled: false
+          },
+          {
+            name: ':/countryName',
+            linkTo: 'country',
+            disabled: false
+          },
+          {
+            name: ':/articleName',
+            linkTo: 'article',
             disabled: true
           }
         ]

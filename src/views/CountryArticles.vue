@@ -2,20 +2,22 @@
   <div class='parent-grid'>
     <h1 v-if="articles.length === 0" class='no-article'> Pas encore d'articles :)</h1>
     <template v-for="(article, index) in articles">
-      <router-link tag='v-card' class="v-card--hover" :to="article.linkTo" :key='index'>
-        <img
-          class='article-image'
-          :src='getUrl(article.imageUrl)'
-          :alt="article.name"
-          aspect-ratio="2.75"
-        />
-        <v-card-title primary-title class='card-title-text'>
-            <h3 class="headline mb-0 card-title">{{article.name}}</h3>
-            <div class='card-text'> {{article.description}} </div>
-        </v-card-title>
-        <v-card-actions class='explore'>
-            <v-btn flat color="green">Voir l'article</v-btn>
-        </v-card-actions>
+      <router-link tag='div' :to="{name: 'article',  params: { articleName: 'sukhotai'} }" :key='index'>
+        <v-card hover style="height: 100%">
+          <img
+            class='article-image'
+            :src='getUrl(article.imageUrl)'
+            :alt="article.name"
+            aspect-ratio="2.75"
+          />
+          <v-card-title primary-title class='card-title-text'>
+              <h3 class="headline mb-0 card-title">{{article.name}}</h3>
+              <div class='card-text'> {{article.description}} </div>
+          </v-card-title>
+          <v-card-actions class='explore'>
+              <v-btn flat color="green">Voir l'article</v-btn>
+          </v-card-actions>
+        </v-card>
       </router-link>
       <div :key="index + 'emptyDiv'"></div>
     </template>
@@ -27,42 +29,42 @@ export default {
   data () {
     return {
       articles: [
-        // {
-        //   name: 'article 1',
-        //   imageUrl: 'malaysia',
-        //   linkTo: '',
-        //   description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
-        // },
-        // {
-        //   name: 'article 2',
-        //   imageUrl: 'malaysia',
-        //   linkTo: '',
-        //   description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
-        // },
-        // {
-        //   name: 'article 3',
-        //   imageUrl: 'malaysia',
-        //   linkTo: '',
-        //   description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
-        // },
-        // {
-        //   name: 'article 4',
-        //   imageUrl: 'malaysia',
-        //   linkTo: '',
-        //   description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
-        // },
-        // {
-        //   name: 'article 5',
-        //   imageUrl: 'malaysia',
-        //   linkTo: '',
-        //   description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
-        // },
-        // {
-        //   name: 'article 6',
-        //   imageUrl: 'malaysia',
-        //   linkTo: '',
-        //   description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
-        // }
+        {
+          name: 'article 1',
+          imageUrl: 'malaysia',
+          linkTo: 'article',
+          description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
+        },
+        {
+          name: 'article 2',
+          imageUrl: 'malaysia',
+          linkTo: 'article',
+          description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
+        },
+        {
+          name: 'article 3',
+          imageUrl: 'malaysia',
+          linkTo: 'article',
+          description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
+        },
+        {
+          name: 'article 4',
+          imageUrl: 'malaysia',
+          linkTo: 'article',
+          description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
+        },
+        {
+          name: 'article 5',
+          imageUrl: 'malaysia',
+          linkTo: 'article',
+          description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
+        },
+        {
+          name: 'article 6',
+          imageUrl: 'malaysia',
+          linkTo: 'article',
+          description: 'Located two hours south of Sydney in the Southern Highlands of New South Wales, ...'
+        }
       ]
     }
   },
