@@ -2,7 +2,7 @@
   <div class='parent-grid'>
     <h1 v-if="articles.length === 0" class='no-article'> Pas encore d'articles :)</h1>
     <template v-for="(article, index) in articles">
-      <router-link tag='div' :to="{name: 'article',  params: { articleName: 'sukhotai'} }" :key='index'>
+      <router-link tag='div' :to="{name: 'article',  params: { articleName: 'pangandaran'} }" :key='index'>
         <v-card hover style="height: 100%">
           <img
             class='article-image'

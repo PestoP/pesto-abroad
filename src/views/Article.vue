@@ -3,10 +3,10 @@
 </template>
 
 <script>
-import Sukhotai from './articles/thailand/Sukhotai.vue'
+import Pangandaran from './articles/indonesia/Pangandaran.vue'
 
 export default {
-  components: {Sukhotai},
+  components: {Pangandaran},
   data () {
     return {
       articleComponentName: this.$route.params.articleName.charAt(0).toUpperCase() + this.$route.params.articleName.slice(1)
