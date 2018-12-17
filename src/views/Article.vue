@@ -14,3 +14,13 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
