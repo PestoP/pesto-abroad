@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import {countries} from '../../constants'
+import { countries } from '../../constants'
 
 export default {
   props: ['countrySelected'],
@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     goTo (country) {
-      this.$router.push({name: 'country', params: { countryName: country }})
+      this.$router.push({ name: 'country', params: { countryName: country } })
     }
   }
 }

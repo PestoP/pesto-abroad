@@ -16,7 +16,7 @@
 import AsianMap from './AsianMap.vue'
 import CountriesList from './List.vue'
 import CountryCard from './Card.vue'
-import {countries} from '../../constants'
+import { countries } from '../../constants'
 
 export default {
   name: 'CountriesView',
