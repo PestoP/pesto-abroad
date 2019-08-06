@@ -1,7 +1,7 @@
 <template>
 <v-container>
 
-  <article>
+  <article class='article'>
     <h2>Le calme de Pangandaran</h2>
     <h3>
       Comment arriver à pangandaran depuis Jakarta ?
