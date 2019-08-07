@@ -31,7 +31,7 @@
         1 jour découverte du surf le matin, barbecue sur la plage avec poisson frais et légumes cuisiné de façon local, l'après midi massage sur la plage, photo avec des locaux (peu habitué à voir des occidentaux) et baignade :)
         Si vous vous entendez bien avec les locaux qui organisent les activités, ils vous proposeront d'aller boire un verre avec eux le soir au bamboo café.
       </p>
-      <img src="@/assets/article/pangandaran/barbecue.jpg" alt="Barbecue on the beach after surfing">
+      <LazyImage url='@/assets/article/pangandaran/barbecue.jpg' width=600 height=400 alt='Barbecue on the beach after surfing'/>
       <p>
         On peut rallonger le séjour pour prendre plus de cours de surf, ou pour d'autres activités que je n'ai pas essayé. Le green canyon / valley et le surf étaient des activités proposées par l'homestay.
       </p>
@@ -46,3 +46,10 @@
   </article>
 </v-container>
 </template>
+
+<script>
+import LazyImage from './../../../common/LazyImage.vue'
+export default {
+  components: {LazyImage}
+}
+</script>
