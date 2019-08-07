@@ -1,5 +1,5 @@
 <template>
-  <component :is="articleComponentName" />
+  <component :is="articleComponentName" class="article" />
 </template>
 
 <script>
@@ -25,24 +25,39 @@ img {
 }
 
 .article {
+  $heightBackgroundImage: 350px;
 
   h2 {
     line-height: 6;
     font-size: 45px;
     text-align: center;
+    color: white;
+    padding-top: 70px;
+
+    opacity: 0.85;
+    background-image: url('~@/assets/article/pangandaran/barbecue.jpg');
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: $heightBackgroundImage + 10px;
+    margin-top: -10px;
   }
 
-  h3 {
-    line-height: 4;
-    font-size: 30px;
-    font-family: initial;
-  }
+  .article-body {
+    padding-top: $heightBackgroundImage;
+    h3 {
+      line-height: 4;
+      font-size: 30px;
+      font-family: initial;
+    }
 
-  p {
-    font-size: 20px;
-    text-align: justify;
-    font-family: Georgia, Serif;
-    text-justify: inter-word;
+    p {
+      font-size: 20px;
+      text-align: justify;
+      font-family: Georgia, Serif;
+      text-justify: inter-word;
+    }
   }
 }
 </style>
