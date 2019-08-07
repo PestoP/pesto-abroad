@@ -8,7 +8,7 @@
     <v-toolbar-items>
       <v-breadcrumbs divider=">">
         <v-breadcrumbs-item
-          v-for="path in breadcrumbList"
+          v-for="path in this.getBreadcrumb()"
           :key="path.name"
           :disabled="path.disabled"
         >
@@ -33,22 +33,34 @@
 export default {
   data () {
     return {
-      breadcrumbList: this.$route.meta.breadcrumb
+      breadcrumbList: this.getBreadcrumb.bind(this)
     }
   },
-  watch: {
-    '$route' () {
+  methods: {
+    getBreadcrumb () {
       let breadcrumb = this.$route.meta.breadcrumb
-      // dynamic hack to change :countryName by the real value
+      // dynamic hack to change :countryName and :articleName by the real value
       if (this.$route.params.countryName) {
-        breadcrumb[breadcrumb.length - 1] = {
-          name: this.$route.params.countryName.charAt(0).toUpperCase() + this.$route.params.countryName.slice(1),
-          linkTo: 'country',
-          disabled: true
+        if (this.$route.params.articleName) {
+          breadcrumb[breadcrumb.length - 2] = {
+            name: this.$route.params.countryName.charAt(0).toUpperCase() + this.$route.params.countryName.slice(1),
+            linkTo: 'country',
+            disabled: false
+          }
+          breadcrumb[breadcrumb.length - 1] = {
+            name: this.$route.params.articleName.charAt(0).toUpperCase() + this.$route.params.articleName.slice(1),
+            linkTo: 'article',
+            disabled: true
+          }
+        } else {
+          breadcrumb[breadcrumb.length - 1] = {
+            name: this.$route.params.countryName.charAt(0).toUpperCase() + this.$route.params.countryName.slice(1),
+            linkTo: 'country',
+            disabled: true
+          }
         }
       }
-
-      this.breadcrumbList = breadcrumb
+      return breadcrumb
     }
   }
 }
