@@ -7,6 +7,13 @@ import CountriesView from './views/CountriesView/index.vue'
 Vue.use(Router)
 
 export default new Router({
+  scrollBehavior () {
+    /* WOW, great... Clap Clap, Something is broken with the scroll
+       It doesn't go to the top after a big scroll and a clic to another page (in Firefox, didn't try in Chrome or something else)
+       Here is a dirty hack but something is wrong with the page's height. Hope an intern will fix that someday :)
+    */
+    return { x: 0, y: -9999999 }
+  },
   routes: [
     {
       path: '/',
