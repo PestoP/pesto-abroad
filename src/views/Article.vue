@@ -29,7 +29,7 @@ img {
 
   h2 {
     line-height: 6;
-    font-size: 45px;
+    font-size: 3em;
     text-align: center;
     color: white;
     padding-top: 70px;
@@ -48,12 +48,12 @@ img {
     padding-top: $heightBackgroundImage;
     h3 {
       line-height: 4;
-      font-size: 30px;
+      font-size: 2em;
       font-family: initial;
     }
 
     p {
-      font-size: 20px;
+      font-size: 1.25em;
       text-align: justify;
       font-family: Georgia, Serif;
       text-justify: inter-word;
