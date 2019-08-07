@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import {countries} from '../../constants'
+import { countries } from '../../constants'
 
 export default {
   props: ['countrySelected'],
