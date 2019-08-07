@@ -23,6 +23,6 @@ export default {
 
   .page-container {
     padding-top: 75px;
-    padding-bottom: 0;
+    padding-bottom: 20px;
   }
 </style>
