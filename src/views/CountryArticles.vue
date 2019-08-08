@@ -1,6 +1,7 @@
 <template>
   <div class='parent-grid'>
     <h1 v-if="articles.length === 0" class='no-article'> Pas encore d'articles :)</h1>
+    <h1 v-else class='country-title'> {{this.$route.params.countryName.charAt(0).toUpperCase() + this.$route.params.countryName.slice(1)}}</h1>
     <template v-for="(article, index) in articles">
       <router-link tag='div' :to="{name: 'article',  params: { articleName: 'pangandaran'} }" :key='index'>
         <v-card hover style="height: 100%">
@@ -101,17 +102,17 @@ export default {
     grid-auto-rows: 150px;
     grid-column-gap: 2em;
 
-    :nth-child(odd) {
+    :nth-child(even) {
       grid-column: 1 / span 1;
       grid-row: span 3;
     }
 
-    :nth-child(4n-1) {
+    :nth-child(4n) {
       grid-column: 2 / span 1;
       grid-row: span 3;
     }
 
-    :nth-child(2) {
+    :nth-child(3) {
       grid-row: span 2;
     }
 
@@ -119,6 +120,12 @@ export default {
       text-align: center;
       grid-column: 1 / span 2;
       grid-row: 3;
+    }
+
+    .country-title {
+      text-align: center;
+      grid-column: 1 / span 2;
+      align-self: center;
     }
   }
 </style>
