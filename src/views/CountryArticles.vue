@@ -12,7 +12,7 @@
             aspect-ratio="2.75"
           />
           <v-card-title primary-title class='card-title-text'>
-              <h3 class="headline mb-0 card-title">{{article.name}}</h3>
+              <h3 class="mb-0 card-title">{{article.name}}</h3>
               <div class='card-text'> {{article.description}} </div>
           </v-card-title>
           <v-card-actions class='explore'>
@@ -116,6 +116,20 @@ export default {
 <style lang="scss">
   html {
     overflow-y: auto;
+  }
+
+  .card-title {
+    font-size: 2.5em;
+    font-weight: 400;
+    line-height: 1.75em;
+    letter-spacing: normal;
+  }
+
+  .card-text {
+    font-size: 1.25em;
+    font-weight: 400;
+    line-height: 1.30em;
+    letter-spacing: normal;
   }
 
   .article-image {
