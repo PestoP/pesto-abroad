@@ -129,11 +129,65 @@ export default {
     right: 0;
   }
 
-  .parent-grid {
+ .parent-grid {
     padding-left: 24px;
     padding-right: 24px;
     padding-bottom: 24px;
     display: grid;
+
+    .no-article {
+      text-align: center;
+    }
+
+    .country-title {
+      text-align: center;
+      align-self: center;
+    }
+  }
+
+/** Large screen **/
+@media screen and (min-width: 900px) {
+  .parent-grid {
+    grid-template-columns: 2fr 3fr 3fr 2fr;
+    grid-auto-rows: 150px;
+    grid-column-gap: 2em;
+
+    :nth-child(even) {
+      grid-column: 2 / span 1;
+      grid-row: span 3;
+    }
+
+    :nth-child(4n) {
+      grid-column: 3 / span 1;
+      grid-row: span 3;
+    }
+
+    :nth-child(2n-1) {
+      grid-column: span 2;
+    }
+
+    :nth-child(3) {
+      grid-row: span 2;
+    }
+
+    .no-article {
+      text-align: center;
+      grid-column: 2 / span 2;
+      grid-row: 3;
+    }
+
+    .country-title {
+      text-align: center;
+      grid-column: 2 / span 2;
+      align-self: center;
+    }
+  }
+}
+
+/** Medium screen **/
+@media screen and (min-width: 500px) and (max-width: 900px) {
+
+  .parent-grid {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 150px;
     grid-column-gap: 2em;
@@ -164,4 +218,32 @@ export default {
       align-self: center;
     }
   }
+}
+
+/** Small screen **/
+@media screen and (max-width: 500px) {
+  .parent-grid {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 150px;
+    grid-column-gap: 2em;
+
+    :nth-child(even) {
+      grid-row: span 3;
+    }
+
+    .no-article {
+      text-align: center;
+      grid-row: 3;
+    }
+
+    .country-title {
+      text-align: center;
+      align-self: center;
+    }
+  }
+}
 </style>
