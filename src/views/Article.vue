@@ -4,9 +4,20 @@
 
 <script>
 import Pangandaran from './articles/indonesia/Pangandaran.vue'
+import Amed from './articles/indonesia/Amed.vue'
+import Bromo from './articles/indonesia/Bromo.vue'
+import Prambanan from './articles/indonesia/Prambanan.vue'
+import Ijen from './articles/indonesia/Ijen.vue'
+import Munduk from './articles/indonesia/Munduk.vue'
+import NusaPenida from './articles/indonesia/NusaPenida.vue'
+import Borobudur from './articles/indonesia/Borobudur.vue'
+import Yogyakarta from './articles/indonesia/Yogyakarta.vue'
+import SouthBali from './articles/indonesia/SouthBali.vue'
+import Ubud from './articles/indonesia/Ubud.vue'
+import Pemuteran from './articles/indonesia/Pemuteran.vue'
 
 export default {
-  components: { Pangandaran },
+  components: { Pangandaran, Amed, Bromo, Prambanan, Ijen, Munduk, NusaPenida, Borobudur, Yogyakarta, SouthBali, Ubud, Pemuteran },
   data () {
     return {
       articleComponentName: this.$route.params.articleName.charAt(0).toUpperCase() + this.$route.params.articleName.slice(1)
