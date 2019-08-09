@@ -31,7 +31,7 @@
         1 jour découverte du surf le matin, barbecue sur la plage avec poisson frais et légumes cuisiné de façon local, l'après midi massage sur la plage, photo avec des locaux (peu habitué à voir des occidentaux) et baignade :)
         Si vous vous entendez bien avec les locaux qui organisent les activités, ils vous proposeront d'aller boire un verre avec eux le soir au bamboo café.
       </p>
-      <img src="@/assets/article/pangandaran/barbecue.jpg" alt="Barbecue on the beach after surfing">
+      <img src="@/assets/article/pangandaran/barbecue.jpeg" alt="Barbecue on the beach after surfing">
       <p>
         On peut rallonger le séjour pour prendre plus de cours de surf, ou pour d'autres activités que je n'ai pas essayé. Le green canyon / valley et le surf étaient des activités proposées par l'homestay.
       </p>
@@ -41,7 +41,7 @@
       <p>
         On peut faire le trajet entièrement en bus. Ou alors récupérer le train un peu plus au nord en prenant le taxi. Nous avons opté pour un trajet de nuit pour économiser une nuit en même temps (même si la voiture est plus ou moins agréable pour dormir). Le chauffeur nous a déposé à 3h du matin à borobudur pour faire le lever du soleil (450k IDR !!!) et ensuite nous a déposé à nos hôtel à Jogja. Le point positif est la nuit économisée mais le point négatif est le prix du lever du soleil ! Avec beaucoup trop de touristes. Je ne suis pas sûr que ça valait le coup.
       </p>
-      <img src="@/assets/article/pangandaran/indonesian_flag.jpg" alt="Indonesian flag floatting in the air">
+      <img src="@/assets/article/pangandaran/indonesian_flag.jpeg" alt="Indonesian flag floatting in the air">
     </section>
   </article>
 </v-container>
