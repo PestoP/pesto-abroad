@@ -22,3 +22,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+# blog Image (will be in blob storage before prod
+ 
+/src/assets/article/**
