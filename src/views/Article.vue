@@ -33,6 +33,8 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .article {
@@ -71,4 +73,27 @@ img {
     }
   }
 }
+
+/** Small screen **/
+@media screen and (max-width: 500px) {
+  .article {
+    h2 {
+      font-size: 2em;
+    }
+
+    .article-body {
+      h3 {
+        font-size: 1.5em;
+        font-family: initial;
+        line-height: initial;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        }
+      p {
+        font-size: initial;
+      }
+    }
+  }
+}
+
 </style>
