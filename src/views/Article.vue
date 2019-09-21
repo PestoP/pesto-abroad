@@ -32,16 +32,6 @@ export default {
 </script>
 
 <style lang="scss">
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
 .article {
   $heightBackgroundImage: 350px;
 
