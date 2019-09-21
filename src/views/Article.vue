@@ -22,6 +22,11 @@ export default {
     return {
       articleComponentName: this.$route.params.articleName.charAt(0).toUpperCase() + this.$route.params.articleName.slice(1)
     }
+  },
+  watch: {
+    '$route.params.articleName' (newArticleName) {
+      this.articleComponentName = newArticleName
+    }
   }
 }
 </script>
@@ -59,6 +64,11 @@ img {
 
   .article-body {
     padding-top: $heightBackgroundImage;
+
+    // strong {
+
+    // }
+
     h3 {
       line-height: 4;
       font-size: 2em;
