@@ -77,11 +77,27 @@ export default {
   }
 }
 
+/** Medium screen **/
+@media screen and (min-width: 500px) and (max-width: 950px) {
+  .article {
+    max-width: 600px;
+    .article-body {
+      h3 {
+        line-height: 3rem;
+        text-align: justify;
+        margin-bottom: 25px;
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
 /** Small screen **/
 @media screen and (max-width: 500px) {
   .article {
     h2 {
       font-size: 2em;
+      line-height: 3;
     }
 
     .article-body {
