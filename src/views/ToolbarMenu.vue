@@ -20,7 +20,7 @@
     </v-toolbar-items>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
-      <router-link tag='v-btn' class='v-btn--flat' :to="'countries'">
+      <router-link tag='v-btn' class='v-btn--flat' :to="{ path: '/countries' }">
         Liste des pays
       </router-link>
       <v-btn flat disabled>Dernier article</v-btn>
