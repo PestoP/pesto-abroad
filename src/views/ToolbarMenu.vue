@@ -5,7 +5,7 @@
         <span style="font-weight:bold; margin-right: 3px;">Pesto </span> Abroad
       </router-link>
     </v-toolbar-items>
-    <v-toolbar-items>
+    <v-toolbar-items class="hidden-sm-and-down">
       <v-breadcrumbs divider=">">
         <v-breadcrumbs-item
           v-for="path in this.getBreadcrumb()"
