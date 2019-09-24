@@ -59,6 +59,7 @@ export default {
       line-height: 4;
       font-size: 2em;
       font-family: initial;
+      color: royalblue;
     }
 
     p {
