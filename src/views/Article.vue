@@ -62,6 +62,12 @@ export default {
       color: royalblue;
     }
 
+    a {
+      text-decoration: none;
+      font-weight: 600;
+      color: royalblue;
+    }
+
     p {
       font-size: 1.25em;
       text-align: justify;
