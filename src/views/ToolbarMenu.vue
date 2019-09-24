@@ -5,7 +5,7 @@
         <span style="font-weight:bold; margin-right: 3px;">Pesto </span> Abroad
       </router-link>
     </v-toolbar-items>
-    <v-toolbar-items>
+    <v-toolbar-items class="hidden-sm-and-down">
       <v-breadcrumbs divider=">">
         <v-breadcrumbs-item
           v-for="path in this.getBreadcrumb()"
@@ -20,7 +20,7 @@
     </v-toolbar-items>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
-      <router-link tag='v-btn' class='v-btn--flat' :to="'countries'">
+      <router-link tag='v-btn' class='v-btn--flat' :to="{ path: '/countries' }">
         Liste des pays
       </router-link>
       <v-btn flat disabled>Dernier article</v-btn>
