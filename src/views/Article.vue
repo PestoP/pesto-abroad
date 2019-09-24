@@ -22,19 +22,16 @@ export default {
     return {
       articleComponentName: this.$route.params.articleName.charAt(0).toUpperCase() + this.$route.params.articleName.slice(1)
     }
+  },
+  watch: {
+    '$route.params.articleName' (newArticleName) {
+      this.articleComponentName = newArticleName
+    }
   }
 }
 </script>
 
 <style lang="scss">
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .article {
   $heightBackgroundImage: 350px;
 
@@ -57,10 +54,18 @@ img {
 
   .article-body {
     padding-top: $heightBackgroundImage;
+
     h3 {
       line-height: 4;
       font-size: 2em;
       font-family: initial;
+      color: royalblue;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: 600;
+      color: royalblue;
     }
 
     p {
@@ -71,4 +76,27 @@ img {
     }
   }
 }
+
+/** Small screen **/
+@media screen and (max-width: 500px) {
+  .article {
+    h2 {
+      font-size: 2em;
+    }
+
+    .article-body {
+      h3 {
+        font-size: 1.5em;
+        font-family: initial;
+        line-height: initial;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        }
+      p {
+        font-size: initial;
+      }
+    }
+  }
+}
+
 </style>
