@@ -55,10 +55,6 @@ export default {
   .article-body {
     padding-top: $heightBackgroundImage;
 
-    // strong {
-
-    // }
-
     h3 {
       line-height: 4;
       font-size: 2em;
