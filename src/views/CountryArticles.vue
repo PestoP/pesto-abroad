@@ -7,7 +7,7 @@
         <v-card hover style="height: 100%">
           <img
             class='article-image'
-            :src='getUrl(article.imageUrl)'
+            :src='getUrl(article.componentName)'
             :alt="article.name"
             aspect-ratio="2.75"
           />
@@ -41,8 +41,8 @@ export default {
     }
   },
   methods: {
-    getUrl (imageUrl) {
-      return require('@/assets/article/' + imageUrl + '.jpeg')
+    getUrl (articleName) {
+      return require(`@/assets/article/${articleName.toLowerCase()}/background_articles.jpg`)
     }
   }
 }
