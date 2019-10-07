@@ -4,28 +4,28 @@
       <defs>
         <amcharts:ammap projection="mercator" leftLongitude="69.6" topLatitude="50.68" rightLongitude="155.25" bottomLatitude="-55.55"></amcharts:ammap>
         <pattern id="vietnamWallpaper" width="100%" height="100%">
-          <image xlink:href="@/assets/vietnam.jpeg" width="100px" height="100px" x="-65" y="-35"></image>
+          <image xlink:href="@/assets/vietnam.jpeg" width="150px" height="75px" x="-65" y="-15"></image>
         </pattern>
         <pattern id="malaysiaWallpaper" width="100%" height="100%">
           <image xlink:href="@/assets/malaysia.jpeg" height="75px" width="125px" y="-40" x="-60"></image>
         </pattern>
         <pattern id="myanmarWallpaper" width="100%" height="100%">
-          <image xlink:href="@/assets/myanmar.jpeg" height="100px" y="-25" width="100px" x="-40"></image>
+          <image xlink:href="@/assets/myanmar.jpeg" height="100px" y="-25" width="120px" x="-60"></image>
         </pattern>
         <pattern id="laosWallpaper" width="100%" height="100%">
-          <image xlink:href="@/assets/laos.jpeg" height="100px" width="50px" x="-20" y="-40"></image>
+          <image xlink:href="@/assets/laos.jpeg" height="100px" width="75px" x="-20" y="-40"></image>
         </pattern>
         <pattern id="thailandWallpaper" width="100%" height="100%">
-          <image xlink:href="@/assets/thailand.jpeg" height="100px" width="75px" y="-25" x="-16"></image>
+          <image xlink:href="@/assets/thailand.jpeg" height="100px" width="175px" y="-35" x="-16"></image>
         </pattern>
         <pattern id="cambodiaWallpaper" width="100%" height="100%">
-          <image xlink:href="@/assets/cambodia.jpeg" height="100px" width="50px" y="-40" x="-18"></image>
+          <image xlink:href="@/assets/cambodia.jpeg" height="100px" width="75px" y="-40" x="-18"></image>
         </pattern>
         <pattern id="philippinesWallpaper" width="100%" height="100%">
-          <image xlink:href="@/assets/philippines.jpeg" height="100px" x="-10" width="75px" y="-30"></image>
+          <image xlink:href="@/assets/philippines.jpeg" height="100px" x="-10" width="150px" y="-30"></image>
         </pattern>
         <pattern id="indonesiaWallpaper" width="100%" height="100%">
-          <image xlink:href="@/assets/indonesia.jpeg" height="100px" width="150px" x="-10" y="-15"></image>
+          <image xlink:href="@/assets/indonesia.jpeg" height="100px" width="175px" x="0" y="-35"></image>
         </pattern>
       </defs>
       <g transform="scale(3.5)">
