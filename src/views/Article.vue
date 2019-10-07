@@ -43,7 +43,6 @@ export default {
     padding-top: 70px;
 
     opacity: 0.85;
-    background-image: url('~@/assets/article/pangandaran/barbecue.jpeg');
     background-size: cover;
     position: absolute;
     left: 0;

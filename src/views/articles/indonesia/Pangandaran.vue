@@ -57,3 +57,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  header {
+    background-image: url('~@/assets/article/pangandaran/barbecue_background.jpeg');
+  }
+</style>
