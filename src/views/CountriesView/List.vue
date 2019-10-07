@@ -39,8 +39,8 @@ export default {
 
   .countries-list {
     .active {
-      color: green;
-      font-weight: bold;
+      font-weight: 600;
+      color: royalblue;
     }
     padding-top: 40px;
     padding-left: 0px;
