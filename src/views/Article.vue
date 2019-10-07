@@ -35,13 +35,7 @@ export default {
 .article {
   $heightBackgroundImage: 350px;
 
-  h2 {
-    line-height: 6;
-    font-size: 3em;
-    text-align: center;
-    color: white;
-    padding-top: 70px;
-
+  header {
     opacity: 0.85;
     background-size: cover;
     position: absolute;
@@ -49,6 +43,14 @@ export default {
     width: 100%;
     height: $heightBackgroundImage + 10px;
     margin-top: -10px;
+
+    h2 {
+      line-height: 6;
+      font-size: 3em;
+      text-align: center;
+      color: white;
+      padding-top: 70px;
+    }
   }
 
   .article-body {
@@ -94,7 +96,7 @@ export default {
 /** Small screen **/
 @media screen and (max-width: 500px) {
   .article {
-    h2 {
+    header > h2 {
       font-size: 2em;
       line-height: 3;
     }
