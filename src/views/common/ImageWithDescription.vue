@@ -12,7 +12,16 @@ export default {
   props: ['src', 'alt', 'description'],
   methods: {
     getUrl () {
-      return require('@/assets/article/' + this.src + '.jpeg')
+      let src = this.src
+      const widthScreen = window.innerWidth
+
+      if (widthScreen > 500 && widthScreen < 950) {
+        src = src + '_medium'
+      } else if (widthScreen <= 500) {
+        src = src + '_small'
+      }
+
+      return require('@/assets/article/' + src + '.jpeg')
     }
   }
 }
