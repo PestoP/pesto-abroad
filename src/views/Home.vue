@@ -15,7 +15,6 @@
             <router-link :to="{path: '/'}">
               <a href="javascript:;" class="body-2">Accueil</a>
             </router-link>
-            <a href="javascript:;" class="body-2">À propos</a>
             <a href="https://www.instagram.com/florianpesto/" class="body-2" target="_blank">Instagram</a>
             <a href="javascript:;" class="body-2">Dernier article</a>
           </v-layout>
