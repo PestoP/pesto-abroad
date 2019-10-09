@@ -789,6 +789,9 @@ export default {
 
   .asia-map {
     height: 100%;
+    width: 120%;
+    margin-left: -110px;
+    margin-top: -70px;
 
     #BD, #BT, #KH, #CN, #ID, #IN, #JP, #LA, #KP, #KR, #MM, #MY, #NP, #PG, #PH, #LK, #TH, #TW, #VN {
       &:hover {
