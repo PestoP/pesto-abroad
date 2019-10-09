@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="height: 100%;">
     <svg class='asia-map' xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
       <defs>
         <amcharts:ammap projection="mercator" leftLongitude="69.6" topLatitude="50.68" rightLongitude="155.25" bottomLatitude="-55.55"></amcharts:ammap>
@@ -69,11 +69,7 @@ export default {
   }
 
   .asia-map {
-    height: 1800px;
-    width: 3400px;
-    position: relative;
-    left: -2530px;
-    top: -1180px;
+    height: 100%;
 
     #BD, #BT, #KH, #CN, #ID, #IN, #JP, #LA, #KP, #KR, #MM, #MY, #NP, #PG, #PH, #LK, #TH, #TW, #VN {
       &:hover {
