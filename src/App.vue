@@ -18,7 +18,7 @@ export default {
 
 <style>
   html {
-    overflow: hidden;
+    overflow: auto;
   }
 
   .page-container {

@@ -49,10 +49,6 @@ export default {
 </script>
 
 <style lang="scss">
-  html {
-    overflow-y: auto;
-  }
-
   .card-title {
     font-size: 2.5em;
     font-weight: 400;
