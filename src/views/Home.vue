@@ -6,7 +6,7 @@
             <img
               class="img-circle elevation-7 mb-1"
               alt='pesto-avatar'
-              src="@/assets/avatar.png"
+              src="@/assets/avatar.jpg"
             >
           </v-avatar>
           <div class="headline"><span style="font-weight:bold">Pesto</span> Abroad</div>
