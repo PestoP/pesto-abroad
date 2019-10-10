@@ -63,6 +63,8 @@ export default {
     padding-right: 24px;
     padding-bottom: 24px;
     display: grid;
+    grid-auto-rows: 160px;
+    grid-column-gap: 2em;
 
     .no-article {
       text-align: center;
@@ -78,8 +80,6 @@ export default {
 @media screen and (min-width: 900px) {
   .parent-grid {
     grid-template-columns: 2fr 3fr 3fr 2fr;
-    grid-auto-rows: 150px;
-    grid-column-gap: 2em;
 
     :nth-child(even) {
       grid-column: 2 / span 1;
@@ -118,8 +118,6 @@ export default {
 
   .parent-grid {
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 150px;
-    grid-column-gap: 2em;
 
     :nth-child(even) {
       grid-column: 1 / span 1;
@@ -155,10 +153,7 @@ export default {
     padding-left: 24px;
     padding-right: 24px;
     padding-bottom: 24px;
-    display: grid;
     grid-template-columns: 1fr;
-    grid-auto-rows: 150px;
-    grid-column-gap: 2em;
 
     :nth-child(even) {
       grid-row: span 3;
