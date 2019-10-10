@@ -15,7 +15,6 @@
             <router-link :to="{path: '/'}">
               <a href="javascript:;" class="body-2">Accueil</a>
             </router-link>
-            <a href="javascript:;" class="body-2">À propos</a>
             <a href="https://www.instagram.com/florianpesto/" class="body-2" target="_blank">Instagram</a>
             <a href="javascript:;" class="body-2">Dernier article</a>
           </v-layout>
@@ -31,20 +30,20 @@
                 :src="post.imgUrl"
                 :alt="post.title"
               >
-                <v-container fill-height fluid>
+                <v-container fill-height fluid class='card-title-text'>
                   <v-layout text-xs-left>
                     <v-flex xs12>
-                      <span class="headline">{{ post.title }}</span>
+                      <span class="card-title">{{ post.title }}</span>
                     </v-flex>
                   </v-layout>
                 </v-container>
               </v-card-media>
-              <v-card-text>
+              <v-card-text class='card-text'>
                 {{ post.content }}
               </v-card-text>
-              <v-card-actions>
+              <v-card-actions class="Explore">
                 <v-spacer></v-spacer>
-                <v-btn flat class="blue--text">Explorer</v-btn>
+                <v-btn flat>Explorer</v-btn>
               </v-card-actions>
             </v-card>
           </router-link>
@@ -83,19 +82,31 @@ export default {
 }
 </script>
 
-<style scoped>
-h1, h2 {
-  font-weight: normal;
+<style lang='scss'>
+/** Card style */
+
+.explore {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+.card-title-text {
+  display: block;
 
-li {
-  display: inline-block;
-  margin: 0 10px;
+  .card-title {
+    font-size: 2.5em;
+    font-weight: 400;
+    line-height: 1.75em;
+    letter-spacing: normal;
+  }
+
+  .card-text {
+    font-size: 1.45em;
+    font-weight: 400;
+    line-height: 1.40em;
+    letter-spacing: normal;
+  }
 }
 
 </style>
