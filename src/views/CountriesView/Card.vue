@@ -9,11 +9,11 @@
           aspect-ratio="2.75"
         />
         <v-card-title primary-title class='card-title-text'>
-            <h3 class="headline mb-0 card-title">{{this.country.name}}</h3>
+            <h3 class="mb-0 card-title">{{this.country.name}}</h3>
             <div class='card-text'>{{this.country.description}}</div>
         </v-card-title>
         <v-card-actions class='explore'>
-          <v-btn flat color="brown">Explore</v-btn>
+          <v-btn flat>Explore</v-btn>
         </v-card-actions>
       </v-card>
     </router-link>
@@ -44,27 +44,23 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .container {
   height: 45%;
 }
 
-.explore {
-  position: absolute;
-  bottom: 0;
-}
-
 .card-country-img {
-  height: 200px;
+  height: 260px;
   width: 100%;
 }
 
 .card-title-text {
   display: block;
+}
 
-  .card-title {
-    padding-bottom: 10px;
-  }
+/** Large screen **/
+@media screen and (min-width: 950px) {
+
 }
 
 </style>

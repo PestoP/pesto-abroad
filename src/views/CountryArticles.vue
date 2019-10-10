@@ -8,7 +8,7 @@
           <img
             class='article-image'
             :src='getUrl(article.componentName)'
-            :alt="article.name"
+            :alt="'photo de couverture ' + article.name"
             aspect-ratio="2.75"
           />
           <v-card-title primary-title class='card-title-text'>
@@ -16,7 +16,7 @@
               <div class='card-text'> {{article.description}} </div>
           </v-card-title>
           <v-card-actions class='explore'>
-              <v-btn flat color="green">Voir l'article</v-btn>
+              <v-btn flat>Voir l'article</v-btn>
           </v-card-actions>
         </v-card>
       </router-link>
@@ -48,30 +48,14 @@ export default {
 }
 </script>
 
-<style lang="scss">
-  .card-title {
-    font-size: 2.5em;
-    font-weight: 400;
-    line-height: 1.75em;
-    letter-spacing: normal;
-  }
-
-  .card-text {
-    font-size: 1.25em;
-    font-weight: 400;
-    line-height: 1.30em;
-    letter-spacing: normal;
-  }
-
+<style lang="scss" scoped>
   .article-image {
     height: 200px;
     width: 100%;
   }
 
-  .explore {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  .card-text {
+    font-size: 1.25em;
   }
 
  .parent-grid {
