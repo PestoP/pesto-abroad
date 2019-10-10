@@ -60,6 +60,6 @@ export default {
 
 <style lang="scss" scoped>
   header {
-    background-image: url('~@/assets/article/pangandaran/barbecue_background.jpeg');
+    background-image: url('~@/assets/article/pangandaran/article_background.jpg');
   }
 </style>
